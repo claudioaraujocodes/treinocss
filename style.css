@@ -29,9 +29,9 @@
 
 header {
 
-position: fixed;  /*faz o menu fixo na tela, com atenção a novas posições de margin top.*/
+position: fixed;  
 display: flex;
-justify-content: space-between; /*além de um estar ao lado do outro, cada um assume um extremo da direita  e da esquerda no layout */
+justify-content: space-between; 
 margin-top: -40px;
 width: 100%;
 height: 70px;
@@ -40,7 +40,7 @@ padding: 10px;
 align-items: center;
 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.374);
 
-flex-wrap: wrap; /* se a tela reduzir bastante a ponto dos objetos colidirem, quebre o layout para a proxima linha. */
+flex-wrap: wrap; 
 
 
 
@@ -51,7 +51,7 @@ flex-wrap: wrap; /* se a tela reduzir bastante a ponto dos objetos colidirem, qu
 
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* se a tela reduzir bastante a ponto dos objetos colidirem, quebre o layout para a proxima linha. */
+    flex-wrap: wrap; 
 }
 
 .menu li a {
