@@ -1,22 +1,10 @@
-
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
-
-.topo{
-    display: flex;
-    flex-direction: row;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-
-
 
 
 .logo {
@@ -24,45 +12,100 @@
     width: 35px;
     height: 35px;
     border-radius: 10px;
-    background-color:cornflowerblue;
+    background-color: cornflowerblue;
 }
 
-header {
+.topo {
 
-position: fixed;  /*faz o menu fixo na tela, com atenção a novas posições de margin top.*/
-display: flex;
-justify-content: space-between; /*além de um estar ao lado do outro, cada um assume um extremo da direita  e da esquerda no layout */
-margin-top: -40px;
-width: 100%;
-height: 70px;
-background-color: rgb(6, 6, 6);
-padding: 10px;
-align-items: center;
-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.374);
+    position: fixed;
+    /*menu fixo na tela */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(6, 6, 6);
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.374);
+    padding-left: 60px;
+    padding-right: 60px;
+    flex-wrap: wrap;
 
-flex-wrap: wrap; /* se a tela reduzir bastante a ponto dos objetos colidirem, quebre o layout para a proxima linha. */
+}
 
 
+.alt-menu {
+    display: none;
+}
 
+
+@media screen and (max-width: 375px) {
+
+    .topo {
+
+        position: fixed;
+        /*menu fixo na tela */
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 90px;
+        background-color: rgb(6, 6, 6);
+        align-items: center;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.374);
+        flex-wrap: wrap;
+
+    }
+
+    .menu li a {
+        display: none;
+    }
+
+    .alt-menu a:hover {
+        color: aliceblue;
+        text-decoration: none;
+        background-color: rgb(55, 55, 55);
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        background-color: cornflowerblue;
+        margin-right: 12px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .alt-menu {
+        display: flex;
+        flex-direction: row;
+        color: aliceblue;
+        justify-content: space-around;
+    }
+
+    .alt-menu a {
+        color: aliceblue;
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 5px;
+    }
 }
 
 
 .menu {
-
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* se a tela reduzir bastante a ponto dos objetos colidirem, quebre o layout para a proxima linha. */
+    flex-wrap: wrap;
 }
 
 .menu li a {
-
     color: aliceblue;
     text-decoration: none;
     margin-left: 15px;
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
-
-
 }
 
 .menu li a:hover {
@@ -76,19 +119,17 @@ flex-wrap: wrap; /* se a tela reduzir bastante a ponto dos objetos colidirem, qu
 h1 {
     color: white;
     text-align: center;
-    padding-top: 85px;
-
-    margin: 40px;
+    padding-top: 120px;
+    padding-bottom: 35px;
 
 }
 
 body {
     width: 100%;
     height: 100vh;
-   
-    background-color:cornflowerblue;
-   
-   }
+    background-color: cornflowerblue;
+
+}
 
 .container {
 
@@ -97,24 +138,19 @@ body {
     margin: 0 auto;
     padding-bottom: 150px;
     flex-wrap: wrap;
-
 }
-
 
 .container div {
     flex: 1 1 500px;
     margin: 10px;
 }
 
-
-
 img {
-
     width: 100%;
     border-radius: 10px;
 }
 
-.rodape{
+.rodape {
     display: flex;
     flex-direction: column;
     align-items: center;
